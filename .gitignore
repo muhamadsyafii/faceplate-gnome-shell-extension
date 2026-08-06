@@ -1,0 +1,25 @@
+# GNOME Shell extension build artifacts
+*.shell-extension.zip
+*.zip
+schemas/gschemas.compiled
+docs
+
+# Local test installs or extracted packages
+*.shell-extension/
+
+# Logs and runtime leftovers
+*.log
+*.tmp
+*.bak
+*~
+
+# Editor and tool caches
+.vscode/
+.idea/
+.fleet/
+.marscode/
+.md
+
+# OS metadata
+.DS_Store
+Thumbs.db

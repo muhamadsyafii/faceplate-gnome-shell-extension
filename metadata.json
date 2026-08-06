@@ -1,0 +1,9 @@
+{
+  "uuid": "faceplate@muhamadsyafii",
+  "name": "Faceplate",
+  "description": "Adds a compact profile faceplate to the GNOME top panel, showing your account avatar and display name with optional click actions.",
+  "shell-version": ["42", "43", "44"],
+  "url": "https://github.com/muhamadsyafii/faceplate-gnome-shell-extension",
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.faceplate"
+}

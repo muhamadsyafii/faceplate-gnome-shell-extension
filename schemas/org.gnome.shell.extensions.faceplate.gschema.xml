@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.faceplate"
+          path="/org/gnome/shell/extensions/faceplate/">
+    <key name="custom-command" type="s">
+      <default>''</default>
+      <summary>Command to run when the avatar is clicked</summary>
+      <description>Optional shell command to run when the avatar indicator in the panel is clicked.</description>
+    </key>
+    <key name="layout-horizontal" type="b">
+      <default>true</default>
+      <summary>Use horizontal layout</summary>
+      <description>When enabled, the avatar and name are displayed side by side. When disabled, they are stacked vertically.</description>
+    </key>
+    <key name="custom-avatar-path" type="s">
+      <default>''</default>
+      <summary>Custom avatar path</summary>
+      <description>Optional local image path used instead of the avatar from AccountsService.</description>
+    </key>
+  </schema>
+</schemalist>

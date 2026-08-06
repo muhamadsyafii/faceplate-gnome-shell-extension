@@ -1,0 +1,20 @@
+.faceplate-box {
+    spacing: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.faceplate-box-dark {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.faceplate-box-light {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+}
+
+.faceplate-icon {
+    icon-size: 22px;
+    border-radius: 999px;
+}
