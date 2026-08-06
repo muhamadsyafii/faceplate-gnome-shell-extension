@@ -1,20 +1,142 @@
 .faceplate-box {
-    spacing: 6px;
-    padding: 2px 8px;
-    border-radius: 999px;
+  spacing: 5px;
+  padding: 1px 5px;
 }
 
-.faceplate-box-dark {
-    background-color: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
+.faceplate-avatar {
+  background-size: cover;
+  background-position: center;
+  border-radius: 999px;
 }
 
-.faceplate-box-light {
-    background-color: rgba(0, 0, 0, 0.08);
-    color: #1a1a1a;
+.faceplate-avatar-small {
+  border-radius: 999px;
+  min-width: 18px;
+  min-height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
-.faceplate-icon {
-    icon-size: 22px;
-    border-radius: 999px;
+.faceplate-avatar-large {
+  border-radius: 999px;
+  min-width: 64px;
+  min-height: 64px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.faceplate-avatar-fallback-icon {
+  icon-size: 14px;
+}
+
+.faceplate-menu-header {
+  min-width: 248px;
+  padding: 2px 0;
+}
+
+.faceplate-menu-profile {
+  spacing: 5px;
+}
+
+.faceplate-menu-header-text {
+  spacing: 2px;
+  text-align: center;
+}
+
+.faceplate-menu-name {
+  font-weight: 700;
+  text-align: center;
+}
+
+.faceplate-menu-subtitle {
+  opacity: 0.72;
+  text-align: center;
+}
+
+.faceplate-menu-value {
+  font-weight: 600;
+}
+
+.faceplate-status-row {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.faceplate-status-content {
+  min-width: 244px;
+  spacing: 7px;
+}
+
+.faceplate-status-title {
+  min-width: 62px;
+}
+
+.faceplate-dialog-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.faceplate-dialog-subtitle {
+  opacity: 0.72;
+}
+
+.faceplate-about-description {
+  min-width: 300px;
+  spacing: 2px;
+  opacity: 0.9;
+}
+
+.faceplate-about-description-line {
+  text-align: left;
+}
+
+.faceplate-about-list {
+  spacing: 5px;
+  padding-top: 10px;
+}
+
+.faceplate-about-row {
+  spacing: 10px;
+}
+
+.faceplate-about-label {
+  min-width: 82px;
+  font-weight: 700;
+}
+
+.faceplate-about-value {
+  max-width: 260px;
+  opacity: 0.82;
+}
+
+.faceplate-usage-list {
+  spacing: 4px;
+}
+
+.faceplate-usage-scroll {
+  min-width: 380px;
+  max-height: 280px;
+  padding-top: 8px;
+}
+
+.faceplate-usage-row {
+  spacing: 6px;
+}
+
+.faceplate-usage-header-row {
+  font-weight: 700;
+}
+
+.faceplate-usage-cell {
+  min-width: 76px;
+}
+
+.faceplate-usage-cell-rank {
+  min-width: 32px;
+}
+
+.faceplate-usage-cell-app {
+  min-width: 132px;
+}
+
+.faceplate-usage-cell-duration {
+  min-width: 86px;
 }

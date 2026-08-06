@@ -4,8 +4,18 @@
           path="/org/gnome/shell/extensions/faceplate/">
     <key name="custom-command" type="s">
       <default>''</default>
-      <summary>Command to run when the avatar is clicked</summary>
-      <description>Optional shell command to run when the avatar indicator in the panel is clicked.</description>
+      <summary>Command to run from the Faceplate menu</summary>
+      <description>Optional shell command to run from the custom command item in the Faceplate menu.</description>
+    </key>
+    <key name="default-click-action" type="s">
+      <default>'menu'</default>
+      <summary>Default click action</summary>
+      <description>Controls whether clicking Faceplate opens its menu or directly runs the selected launch command.</description>
+    </key>
+    <key name="launch-command" type="s">
+      <default>'user-accounts'</default>
+      <summary>Launch command preset</summary>
+      <description>Command preset used by the Launch Command menu item and direct click action.</description>
     </key>
     <key name="layout-horizontal" type="b">
       <default>true</default>
