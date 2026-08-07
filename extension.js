@@ -66,6 +66,8 @@ class AvatarIndicator extends PanelMenu.Button {
         this._statusRefreshId = 0;
         this._usageTimerId = 0;
         this._focusWindowId = 0;
+        this._buttonPressId = 0;
+        this._menuOpenStateId = 0;
         this._activeAppKey = null;
         this._activeAppSince = 0;
         this._usageStartedAt = GLib.get_monotonic_time();
@@ -99,7 +101,7 @@ class AvatarIndicator extends PanelMenu.Button {
         this._box.add_child(this._label);
         this.add_child(this._box);
 
-        this.connect('button-press-event', () => {
+        this._buttonPressId = this.connect('button-press-event', () => {
             if (this._settings.get_string('default-click-action') === CLICK_ACTION_COMMAND) {
                 this._runLaunchCommand();
                 return Clutter.EVENT_STOP;
@@ -122,7 +124,7 @@ class AvatarIndicator extends PanelMenu.Button {
         );
 
         this._buildMenu();
-        this.menu.connect('open-state-changed', (menu, isOpen) => {
+        this._menuOpenStateId = this.menu.connect('open-state-changed', (menu, isOpen) => {
             if (isOpen) {
                 this._syncSystemStatus();
                 this._startStatusRefresh();
@@ -872,6 +874,16 @@ class AvatarIndicator extends PanelMenu.Button {
         if (this._userLoadedId) {
             this._user.disconnect(this._userLoadedId);
             this._userLoadedId = 0;
+        }
+
+        if (this._menuOpenStateId) {
+            this.menu.disconnect(this._menuOpenStateId);
+            this._menuOpenStateId = 0;
+        }
+
+        if (this._buttonPressId) {
+            this.disconnect(this._buttonPressId);
+            this._buttonPressId = 0;
         }
 
         super.destroy();
