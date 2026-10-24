@@ -202,7 +202,7 @@ App Usage is intentionally session-based in this version. It keeps the feature s
 
 ### Why is GNOME Shell 45 not supported yet?
 
-GNOME Shell 45 introduced a newer extension API. Faceplate version 1 is focused on GNOME Shell 42, 43, and 44.
+GNOME Shell 45 introduced a newer extension API. Faceplate version 3 is focused on GNOME Shell 42, 43, and 44.
 
 ## 👨‍💻 Creator
 
