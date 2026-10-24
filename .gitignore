@@ -4,6 +4,9 @@
 schemas/gschemas.compiled
 docs/
 
+# Local documentation drafts
+article-faceplate-v1.md
+
 # Local test installs or extracted packages
 *.shell-extension/
 

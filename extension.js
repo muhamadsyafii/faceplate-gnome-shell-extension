@@ -16,11 +16,12 @@ const AVATAR_SIZE = 22;
 const MENU_AVATAR_SIZE = 64;
 const SETTINGS_SCHEMA = 'org.gnome.shell.extensions.faceplate';
 const EXTENSION_UUID = 'faceplate@muhamadsyafii';
-const EXTENSION_VERSION = '1';
+const EXTENSION_VERSION = '3';
 const EXTENSION_REPOSITORY = 'https://github.com/muhamadsyafii/faceplate-gnome-shell-extension';
 const AUTHOR_PROFILE = 'https://github.com/muhamadsyafii';
 const CLICK_ACTION_MENU = 'menu';
 const CLICK_ACTION_COMMAND = 'command';
+const TEXT_DECODER = new TextDecoder();
 const COMMANDS = {
     'user-accounts': {
         label: 'User Accounts',
@@ -750,7 +751,7 @@ class AvatarIndicator extends PanelMenu.Button {
             if (!ok)
                 return null;
 
-            const text = imports.byteArray.toString(contents);
+            const text = TEXT_DECODER.decode(contents);
             const values = {};
 
             for (const line of text.split('\n')) {
@@ -779,7 +780,7 @@ class AvatarIndicator extends PanelMenu.Button {
             if (!ok)
                 return null;
 
-            const parts = imports.byteArray.toString(contents).trim().split(/\s+/);
+            const parts = TEXT_DECODER.decode(contents).trim().split(/\s+/);
 
             if (parts.length < 3)
                 return null;
@@ -822,7 +823,7 @@ class AvatarIndicator extends PanelMenu.Button {
             if (!ok)
                 return null;
 
-            const text = imports.byteArray.toString(contents);
+            const text = TEXT_DECODER.decode(contents);
             const seconds = Number.parseInt(text.split(' ')[0], 10);
 
             if (!Number.isFinite(seconds))
